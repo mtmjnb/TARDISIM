@@ -1,0 +1,11 @@
+{
+  "type": "tardisim:tardis",
+  "generator": {
+    "type": "flat",
+    "settings": {
+      "biome": "tardisim:tardis",
+      "layers": [],
+      "structure_overrides": []
+    }
+  }
+}
