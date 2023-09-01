@@ -2,7 +2,7 @@
 
 # Clone the world to the tardis dimension
 execute in tardisim:tardis run forceload add 1 1
-clone ~-2 ~-1 ~-4 ~2 ~5 ~ to tardisim:tardis 1 1 1
+clone ~-2 ~-1 ~-4 ~2 ~6 ~ to tardisim:tardis 1 1 1
 execute in tardisim:tardis run forceload remove 1 1
 
 # Place tardis

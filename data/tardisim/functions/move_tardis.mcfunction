@@ -1,11 +1,12 @@
 # From mat_tardis
 
-# Cuts destination
-clone ~-2 ~-1 ~-4 ~2 ~5 ~ to tardisim:tardis 1 1 1
+# Clones destination
+clone ~-2 ~-1 ~-2 ~2 ~6 ~2 to tardisim:tardis 1 1 1
 
 # Place tardis
-fill ~-1 ~-1 ~1 ~1 ~-1 ~-1 minecraft:cyan_terracotta
-place template tardisim:exterior/first ~-2 ~ ~-2
+execute if score $chameleon tardis matches 1 run function tardisim:tardis_exterior/first
+execute if score $chameleon tardis matches 2 run function tardisim:tardis_exterior/cactus
+execute if score $chameleon tardis matches 3 run function tardisim:tardis_exterior/tree
 
 # Moves tardis location
 forceload add ~ ~
