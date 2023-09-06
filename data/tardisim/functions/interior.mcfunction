@@ -1,7 +1,8 @@
 # Runs from tick
 
 # Exits tardis when in exit door
-execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] at @e[type=marker,tag=tardis_location,limit=1] run tp @s ^ ^ ^1 ~ ~
+execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] if score $demat tardis matches 0 at @e[type=marker,tag=tardis_location,limit=1] run tp @s ^ ^ ^1 ~ ~
+execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] if score $demat tardis matches 0 unless entity @e[type=marker,tag=tardis_location,limit=1] run tellraw @s "The TARDIS has traveled too far away from spawn, currently this does not work!"
 
 # Demat and mat tardis
 execute if block ~-1 ~ ~-1 minecraft:lever[powered=false] run scoreboard players set $demat tardis 0
