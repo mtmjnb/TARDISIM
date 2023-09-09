@@ -7,4 +7,4 @@ execute as @a at @s if entity @e[type=marker,tag=tardis_location,distance=..1] i
 execute if score $tardis_state world matches 2 in tardisim:tardis if loaded 0 100 0 run function tardisim:create_tardis_interior
 
 # Runs commands in tardis
-execute in tardisim:tardis positioned 9 102 12 run function tardisim:interior
+execute in tardisim:tardis positioned 24 122 25 run function tardisim:interior

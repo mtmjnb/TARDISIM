@@ -1,5 +1,9 @@
 # Runs from load
 
+# Sets Rotation
+scoreboard players set $rotation tardis 7
+scoreboard players set $rotation notification 7
+
 # Clone the world to the tardis dimension
 execute in tardisim:tardis run forceload add 1 1
 clone ~-2 ~-1 ~-4 ~2 ~6 ~ to tardisim:tardis 1 1 1
