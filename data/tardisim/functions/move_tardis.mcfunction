@@ -9,5 +9,7 @@ execute if score $chameleon tardis matches 1 run function tardisim:tardis_exteri
 execute if score $chameleon tardis matches 2 run function tardisim:tardis_exterior/tree
 
 # Moves tardis location
+forceload remove all
 forceload add ~ ~
 tp @e[type=marker,tag=tardis_location] ~ ~ ~
+tp @e[type=marker,tag=tardis_destination] ~ ~ ~

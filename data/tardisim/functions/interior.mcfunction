@@ -2,7 +2,6 @@
 
 # Exits tardis when in exit door
 execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] if score $demat tardis matches 0 at @e[type=marker,tag=tardis_location,limit=1] run tp @s ^ ^ ^1 ~ ~
-execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] if score $demat tardis matches 0 unless entity @e[type=marker,tag=tardis_location,limit=1] run tellraw @s "The TARDIS has traveled too far away from spawn, currently this does not work!"
 
 # Demat and mat tardis
 execute if block ~-1 ~ ~-1 minecraft:lever[powered=false] run scoreboard players set $demat tardis 0
@@ -17,7 +16,8 @@ execute if block ~ ~ ~1 repeater[delay=3,powered=true] run scoreboard players se
 execute if block ~ ~ ~1 repeater[delay=4,powered=true] run scoreboard players set $time tardis 3
 
 # Deals with space
-execute if block ~1 ~ ~-1 polished_blackstone_button[powered=true] in minecraft:overworld as @e[type=marker,tag=tardis_destination] at @s run tp @s ^ ^ ^5
+execute if block ~1 ~ ~-1 polished_blackstone_button[powered=true] in minecraft:overworld as @e[type=marker,tag=tardis_destination] at @s run tp @s ^ ^ ^5 
+execute if block ~1 ~ ~-1 polished_blackstone_button[powered=true] in minecraft:overworld as @e[type=marker,tag=tardis_destination] at @s run forceload add ~ ~
 execute positioned ~ ~ ~-1 run function tardisim:rotate_movement
 
 # Chameleon Circuit

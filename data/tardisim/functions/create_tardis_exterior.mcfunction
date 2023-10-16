@@ -1,5 +1,7 @@
 # Runs from load
 
+forceload add ~ ~-2
+
 # Sets Rotation
 scoreboard players set $rotation tardis 7
 scoreboard players set $rotation notification 7
