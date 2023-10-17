@@ -4,6 +4,8 @@
 scoreboard objectives add world dummy
 scoreboard objectives add tardis dummy
 scoreboard objectives add notification dummy
+scoreboard objectives add delay dummy
+scoreboard objectives add loop dummy
 scoreboard players add $tardis_state world 0
 scoreboard players add $demat tardis 0
 scoreboard players add $state tardis 0

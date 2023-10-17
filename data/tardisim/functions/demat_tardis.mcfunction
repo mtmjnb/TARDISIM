@@ -11,8 +11,9 @@ execute in minecraft:overworld at @e[type=marker,tag=tardis_location] run clone 
 
 # Sound effects
 playsound minecraft:block.bell.use ambient @a ~-1 ~ ~-1 3 .5
-# TODO: Add delay then looping
-playsound minecraft:entity.blaze.ambient ambient @a ~-1 ~ ~-1 2 .5
+
+# Adds delay
+scoreboard players set $demat_tardis delay 1
 
 # Notification
 title @a actionbar "TARDIS Dematerialising"

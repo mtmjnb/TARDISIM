@@ -6,8 +6,15 @@ execute as @a at @s if entity @e[type=marker,tag=tardis_exit,distance=..0.5] if 
 # Demat and mat tardis
 execute if block ~-1 ~ ~-1 minecraft:lever[powered=false] run scoreboard players set $demat tardis 0
 execute if block ~-1 ~ ~-1 minecraft:lever[powered=true] run scoreboard players set $demat tardis 1
-execute unless score $demat tardis = $state tardis if score $demat tardis matches 0 run function tardisim:mat_tardis
+execute unless score $demat tardis = $state tardis if score $demat tardis matches 0 run scoreboard players set $mat_tardis delay 1
+execute if score $mat_tardis delay matches 1 run scoreboard players add $mat_tardis_count delay 1
+execute if score $mat_tardis_count delay matches 25.. run function tardisim:mat_tardis
 execute unless score $demat tardis = $state tardis if score $demat tardis matches 1 run function tardisim:demat_tardis
+execute if score $demat_tardis delay matches 1 run scoreboard players add $demat_tardis_count delay 1
+execute if score $demat_tardis_count delay matches 15.. run function tardisim:finish_demat_tardis
+execute if score $demat_sound loop matches 1 run scoreboard players add $demat_sound_count loop 1
+execute if score $demat_sound_count loop matches 100.. run playsound minecraft:entity.blaze.ambient ambient @a ~-1 ~ ~-1 2 .5
+execute if score $demat_sound_count loop matches 100.. run scoreboard players set $demat_sound_count loop 0
 
 # Deals with time
 execute if block ~ ~ ~1 repeater[delay=1,powered=true] run scoreboard players set $time tardis 0

@@ -1,8 +1,13 @@
 # Runs from interior
 
-# TODO: Add delay
+# Reset delay and loops
+scoreboard players set $mat_tardis delay 0
+scoreboard players set $mat_tardis_count delay 0
+scoreboard players set $demat_sound loop 0
+scoreboard players set $demat_sound_count loop 0
 
 # Plays sound effect
+stopsound @a ambient minecraft:entity.blaze.ambient
 playsound minecraft:block.bell.use ambient @a ~-1 ~ ~-1 3 .5
 
 # Sets the tardis to demat
