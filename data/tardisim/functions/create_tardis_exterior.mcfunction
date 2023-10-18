@@ -13,7 +13,7 @@ execute in tardisim:tardis run forceload remove 1 1
 
 # Place tardis
 fill ~-1 ~-1 ~-1 ~1 ~-1 ~-3 minecraft:cyan_terracotta
-place template tardisim:exterior/first ~-2 ~ ~-4
+place template tardisim:exterior/one ~-2 ~ ~-4
 execute align xyz run summon minecraft:marker ~0.5 ~ ~-1.5 {Tags:["tardis_location"]}
 execute align xyz run summon minecraft:marker ~0.5 ~ ~-1.5 {Tags:["tardis_destination"]}
 
