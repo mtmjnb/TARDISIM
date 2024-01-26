@@ -15,10 +15,10 @@ scoreboard players set $state tardis 0
 setblock 24 124 30 minecraft:redstone_lamp[lit=false]
 
 # Deals with time
-execute if score $time tardis matches 0 run time add 0.2d
-execute if score $time tardis matches 1 run time add 0.4d
-execute if score $time tardis matches 2 run time add 0.6d
-execute if score $time tardis matches 3 run time add 0.8d
+execute if score $time tardis matches 0 run time add 0d
+execute if score $time tardis matches 1 run time add 0.25d
+execute if score $time tardis matches 2 run time add 0.5d
+execute if score $time tardis matches 3 run time add 0.75d
 scoreboard players set $time tardis 0
 
 # Moves tardis
